@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @feed.title %>
+</p>
+
+<p>
+  <strong>Google alerts url:</strong>
+  <%= @feed.google_alerts_url %>
+</p>
+
+<p>
+  <strong>RSS Feed:</strong>
+  <a href="<%= feed_path(@feed) %>.rss">
+    Heya
+  </a>
+</p>
+
+<%= link_to 'Edit', edit_feed_path(@feed) %> |
+<%= link_to 'Back', feeds_path %>
