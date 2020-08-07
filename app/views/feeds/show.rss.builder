@@ -4,10 +4,9 @@ xml.rss :version => "2.0" do
     xml.title "Google alert - %s" % @feed.title
 
     @feed.rss_feed.css("entry").each do |entry|
-      xml.entry do |e|
-        e.id entry.css("id").text
-        e.published entry.css("published").text
-        e.updated entry.css("updated").text
+      xml.item do |e|
+        e.guid entry.css("id").text
+        e.pubDate entry.css("published").text
 
         e.link entry.css("link").first.attributes
 
@@ -15,9 +14,9 @@ xml.rss :version => "2.0" do
         title = entry.css("title").text
         e.title Nokogiri::HTML.parse(title).text
         
-        # Parse the content
-        content =  entry.css("content").text
-        e.content Nokogiri::HTML.parse(content).text
+        # Parse the description
+        content = entry.css("content").text
+        e.description Nokogiri::HTML.parse(content).text
       end
     end
   end

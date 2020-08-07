@@ -12,9 +12,7 @@
 
 <p>
   <strong>RSS Feed:</strong>
-  <a href="<%= feed_path(@feed) %>.rss">
-    Heya
-  </a>
+  <%= link_to @feed, :format => :rss %>
 </p>
 
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
