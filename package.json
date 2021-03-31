@@ -4,6 +4,9 @@
   "repository": "git@github.com:penguoir/lookout-adam.git",
   "author": "Ori Marash <ori@marash.net>",
   "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "htmlmetaparser": "^2.1.1",
