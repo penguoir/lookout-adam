@@ -52,7 +52,7 @@ app.get('/alerts/feeds/:one/:two', async (req, res) => {
   res.send(responseFeed.xml())
 })
 
-const PORT = 3000; // TODO: change for heroku / kubernetes
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Started on port ${PORT}`)
 })
