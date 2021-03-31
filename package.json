@@ -1,15 +1,14 @@
 {
-  "name": "lookout",
-  "private": true,
+  "name": "lookout-adam",
+  "version": "1.0.0",
+  "repository": "git@github.com:penguoir/lookout-adam.git",
+  "author": "Ori Marash <ori@marash.net>",
+  "license": "MIT",
   "dependencies": {
-    "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "4.2.2",
-    "turbolinks": "^5.2.0"
-  },
-  "version": "0.1.0",
-  "devDependencies": {
-    "webpack-dev-server": "^3.11.0"
+    "express": "^4.17.1",
+    "htmlmetaparser": "^2.1.1",
+    "htmlparser2": "^6.0.1",
+    "rss": "^1.2.2",
+    "rss-parser": "^3.12.0"
   }
 }
