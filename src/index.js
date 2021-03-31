@@ -1,9 +1,9 @@
 const express = require('express')
+const rss = require('rss')
 const rssParser = require('rss-parser')
 const urlMetadata = require('url-metadata')
 const xml = require('xml')
 const url = require('url')
-const rss = require('rss')
 
 const app = express()
 app.get('/', (req, res) => {
@@ -34,7 +34,6 @@ app.get('/alerts/feeds/:one/:two', async (req, res) => {
         }
       }
 
-      console.log(getDesc(data))
       responseFeed.item({
         title: data.title || data['og:title'],
         description: getDesc(data),
